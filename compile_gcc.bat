@@ -42,8 +42,6 @@ if %ERRORLEVEL% == 9009 (goto windres_FAILED)
 rem Reset errorlevel
 dir >nul 2>nul
 
-
-
 set APIsPATH=.\APIs
 set OBJ_OUTPATH_64=.\obj_out\x86_64
 set OBJ_OUTPATH_32=.\obj_out\x86
@@ -56,6 +54,11 @@ set OBJFLAGS=-c -std=c11
 set DLLFLAGS=-shared -std=c11
 set LINKFLAGS_64=-L%PE_OUTPATH_64% -lclr64 -lclip64 -lgen64
 set LINKFLAGS_32=-L%PE_OUTPATH_32% -lclr -lclip -lgen
+
+md %OBJ_OUTPATH_64% >nul 2>nul
+md %OBJ_OUTPATH_32% >nul 2>nul
+md %PE_OUTPATH_64% >nul 2>nul
+md %PE_OUTPATH_32% >nul 2>nul
 
 del /f /s /q /a %PE_OUTPATH_64%\*.* >nul 2>nul
 del /f /s /q /a %PE_OUTPATH_32%\*.* >nul 2>nul
