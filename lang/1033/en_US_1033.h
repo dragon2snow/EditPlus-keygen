@@ -13,7 +13,7 @@
 #define D_ERROR_MSG_USER_NAME_LOST_1033 "Please specify the username."
 #define D_ERROR_MSG_USER_NAME_INVALID_1033 "Invalid username."
 #define D_ERROR_MSG_PARAMETER_INVALID_1033 "Invalid parameters."
-#define I_MSG_INPUT_USER_NAME_1033 "Please enter username(<25 printable characters,must have numbers):"
+#define I_MSG_INPUT_USER_NAME_1033 "Please enter username(<25 English characters and numbers, must have numbers):"
 #define I_ERROR_MSG_USER_NAME_INVALID_1033 "Invalid username,please try again."
 
 #define MSG_USER_NAME_ECHOBACK_1033 "Username you've entered is "
