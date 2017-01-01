@@ -77,7 +77,8 @@ int main(int argc, char *argv[])
 				if (i == argc - 1)
 				{
 					putchar('\n');
-					puts(Lang.D_ERROR_MSG_USER_NAME_LOST);
+					fputs(Lang.D_ERROR_MSG_USER_NAME_LOST, stderr);
+					putchar('\n');
 					exit(EXIT_FAILURE);
 				}
 				if (argc > 2)
@@ -85,7 +86,8 @@ int main(int argc, char *argv[])
 					if (!CheckUserName(argv[i + 1]))
 					{
 						putchar('\n');
-						puts(Lang.D_ERROR_MSG_USER_NAME_INVALID);
+						fputs(Lang.D_ERROR_MSG_USER_NAME_INVALID, stderr);
+						putchar('\n');
 						exit(EXIT_FAILURE);
 					}
 					else
@@ -97,7 +99,8 @@ int main(int argc, char *argv[])
 			}
 			else
 			{
-				puts(Lang.D_ERROR_MSG_PARAMETER_INVALID);
+				fputs(Lang.D_ERROR_MSG_PARAMETER_INVALID, stderr);
+				putchar('\n');
 				exit(EXIT_FAILURE);
 			}
 		}
@@ -125,7 +128,8 @@ int main(int argc, char *argv[])
 		else
 		{
 			putchar('\n');
-			puts(Lang.ERROR_MSG_CHOICE_INVALID);
+			fputs(Lang.ERROR_MSG_CHOICE_INVALID, stderr);
+			putchar('\n');
 		}
 
 		return 0;
@@ -143,7 +147,10 @@ int main(int argc, char *argv[])
 		putchar('\n');
 
 		if (!CheckUserName(u_name))
-			puts(Lang.I_ERROR_MSG_USER_NAME_INVALID);
+		{
+			fputs(Lang.I_ERROR_MSG_USER_NAME_INVALID, stderr);
+			putchar('\n');
+		}
 		else break;
 
 	}
@@ -171,7 +178,8 @@ int main(int argc, char *argv[])
 		else
 		{
 			putchar('\n');
-			puts(Lang.ERROR_MSG_CHOICE_INVALID);
+			fputs(Lang.ERROR_MSG_CHOICE_INVALID, stderr);
+			putchar('\n');
 		}
 
 	return 0;
