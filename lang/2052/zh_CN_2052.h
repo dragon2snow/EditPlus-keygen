@@ -13,7 +13,7 @@
 #define D_ERROR_MSG_USER_NAME_LOST_2052 "请指定用户名！"
 #define D_ERROR_MSG_USER_NAME_INVALID_2052 "用户名不符合要求哦～"
 #define D_ERROR_MSG_PARAMETER_INVALID_2052 "参数不正确。"
-#define I_MSG_INPUT_USER_NAME_2052 "请输入用户名（＜25个字符，必须有数字，不允许中文）："
+#define I_MSG_INPUT_USER_NAME_2052 "请输入用户名（＜25个英文字符或数字，必须有数字）："
 #define I_ERROR_MSG_USER_NAME_INVALID_2052 "用户名不符合要求哦～请再试一次～"
 
 #define MSG_USER_NAME_ECHOBACK_2052 "您输入的用户名为："
