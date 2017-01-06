@@ -44,7 +44,7 @@ void PrintRightInfo(void);
 void PrintTips(char *);
 bool CheckUserName(char *);
 
-char u_name[16];
+char u_name[26];
 char RegCode[30];
 
 sLang Lang;
@@ -92,7 +92,7 @@ int main(int argc, char *argv[])
 					}
 					else
 					{
-						strncpy(u_name, argv[i + 1], 15);
+						strncpy(u_name, argv[i + 1], 25);
 						break;
 					}
 				}
