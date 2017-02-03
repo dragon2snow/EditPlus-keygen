@@ -84,7 +84,7 @@ if %ERRORLEVEL% == 1 (goto compilation_FAILED)
 rem Reset errorlevel
 dir >nul 2>nul
 
-%WINDRES% -l 0409,04b0 -c=437  -i %RESPATH%\1033\resource.rc -o %OBJ_OUTPATH_64%\resource64_1033.o
+%WINDRES% -l 0409,04b0 -c=437 -i %RESPATH%\1033\resource.rc -o %OBJ_OUTPATH_64%\resource64_1033.o
 
 if %ERRORLEVEL% == 1 (goto compilation_FAILED)
 rem Reset errorlevel
@@ -145,12 +145,12 @@ dir >nul 2>nul
 
 if not exist %PE_OUTPATH_64%\libclip64.dll (goto compilation_FAILED)
 if not exist %PE_OUTPATH_64%\libclr64.dll (goto compilation_FAILED)
-if not exist %PE_OUTPATH_64%\libclip64.dll (goto compilation_FAILED)
+if not exist %PE_OUTPATH_64%\libgen64.dll (goto compilation_FAILED)
 if not exist %PE_OUTPATH_64%\keygen64.exe (goto compilation_FAILED)
 
 if not exist %PE_OUTPATH_32%\libclip.dll (goto compilation_FAILED)
 if not exist %PE_OUTPATH_32%\libclr.dll (goto compilation_FAILED)
-if not exist %PE_OUTPATH_32%\libclip.dll (goto compilation_FAILED)
+if not exist %PE_OUTPATH_32%\libgen.dll (goto compilation_FAILED)
 if not exist %PE_OUTPATH_32%\keygen.exe (goto compilation_FAILED)
 
 echo.
